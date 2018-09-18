@@ -1,6 +1,6 @@
-# vue-cli-plugin-`<name>`
+# vue-cli-plugin-modular-router
 
-<description> for [vue-cli@3.0](https://github.com/vuejs/vue-cli)
+Create Modular Router routes for [vue-cli@3.0](https://github.com/vuejs/vue-cli)
 
 ## Install
 
@@ -13,13 +13,13 @@ Generate a project using vue-cli 3.0
 vue create my-app
 ```
 
-Before installing the `<name>` plugin, make sure to commit or stash your changes in case you need to revert
+Before installing the modular-router plugin, make sure to commit or stash your changes in case you need to revert
 
-To install the `<name>` plugin...
+To install the modular-router plugin...
 ```
 cd my-app
 vue add vuetify
-vue add `<name>`
+vue add modular-router
 ```
 
 ## Using with other plugins
@@ -31,6 +31,6 @@ Just add [vue-cli-plugin-electron-builder](https://www.npmjs.com/package/vue-cli
 ```
 vue add electron-builder
 vue add vuetify
-vue add `<name>`
+vue add modular-router
 yarn serve:electron
 ```
