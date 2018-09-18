@@ -18,7 +18,7 @@ Before installing the modular-router plugin, make sure to commit or stash your c
 To install the modular-router plugin...
 ```
 cd my-app
-vue add vuetify
+vue add router
 vue add modular-router
 ```
 
