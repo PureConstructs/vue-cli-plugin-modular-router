@@ -1,3 +1,10 @@
+<a href="https://npmjs.com/package/vue-cli-plugin-modular-router">
+    <img alt="" src="https://img.shields.io/npm/v/vue-cli-plugin-modular-router/latest.svg?style=flat-square">
+</a>
+<a href="https://npmjs.com/package/vue-cli-plugin-modular-router">
+    <img alt="" src="https://img.shields.io/npm/dm/vue-cli-plugin-modular-router.svg?style=flat-square">
+</a>
+
 # vue-cli-plugin-modular-router
 
 Create Modular Router routes for [vue-cli@3.0](https://github.com/vuejs/vue-cli)
@@ -18,7 +25,7 @@ Before installing the modular-router plugin, make sure to commit or stash your c
 To install the modular-router plugin...
 ```
 cd my-app
-vue add router
+vue add router // if you haven't selected to add router during the vue create stage
 vue add modular-router
 ```
 

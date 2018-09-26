@@ -1,28 +1,26 @@
 {
-  "name": "vue-cli-plugin-pure-auth",
-  "version": "0.1.0",
-  "description": "vue-cli 3 plugin to connect to Django Rest Framework auth API",
+  "name": "vue-cli-plugin-modular-router",
+  "version": "0.10.0",
+  "description": "vue-cli 3 plugin to create modular router routes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PureConstructs/vue-cli-plugin-pure-auth.git"
+    "url": "git+https://github.com/PureConstructs/vue-cli-plugin-modular-router.git"
   },
   "keywords": [
-    "vuetify",
-    "django-rest-framework",
-    "auth",
-    "session",
-    "idletimer",
+    "vue-router",
+    "router",
+    "routing",
     "vue",
     "cli",
     "3"
   ],
   "author": "Eric Cormier <Eric@Pureconstructs.com>",
   "license": "MIT",
-  "homepage": "https://github.com/PureConstructs/vue-cli-plugin-pure-auth#readme",
+  "homepage": "https://github.com/PureConstructs/vue-cli-plugin-modular-router#readme",
   "devDependencies": {
     "@vue/cli-service": "^3.0.1"
   }
