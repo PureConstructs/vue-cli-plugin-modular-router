@@ -1,3 +1,8 @@
-import moduleName from '@/views/moduleName'
+import moduleName from '@/views/moduleName/moduleNameHome'
 
-export default [{}, ]
+export default [{
+  path: '/moduleName',
+  name: 'moduleNameHome',
+  title: 'moduleName | Home',
+  component: moduleName,
+}, ]

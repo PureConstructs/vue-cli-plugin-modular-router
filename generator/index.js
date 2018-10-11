@@ -43,19 +43,15 @@ module.exports = (api, options, rootOptions, invoking) => {
     const code = fs.readFileSync(`${routerRootFile}`, 'utf8')
     const ast = recast.parse(code)
 
-    // New option expression to inject
-    const expression = `${options.moduleName}Routes`
+    // New array value to inject
+    const newVal = `${options.moduleName}Routes`
 
     recast.types.visit(ast, {
       visitCallExpression({
         node
       }) {
         if (node.callee.object.name === 'baseRoutes') {
-          node.arguments.push(expression)
-          /* const options = node.arguments[0]
-          if (options && options.type ==='Identifier') {
-
-          } */
+          node.arguments.push(newVal)
         }
 
         return false
@@ -89,6 +85,19 @@ module.exports = (api, options, rootOptions, invoking) => {
         api.exitLog('Error writing to router root index.js: ' + err, 'error')
         return
       }
+    })
+
+    // replace moduleName string in module index.js file
+    fs.readFile(`${moduleDir}/index.js`, 'utf8', (err, data) => {
+      if (err) {
+        api.exitLog('Error reading new module index.js file' + err, 'error')
+        return
+      }
+      var result = data.replace(/moduleName/g, `${options.moduleName}`)
+
+      fs.writeFile(`${moduleDir}/index.js`, result, 'utf8', (err) => {
+        api.exitLog('Error writing changes to new module index.js file' + err, 'error')
+      })
     })
 
     // Remove router.js generated from initial router plugin installation
