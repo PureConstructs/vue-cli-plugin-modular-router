@@ -12,5 +12,5 @@ const routes = baseRoutes.concat(
 )
 
 export default new Router({
-  routes,
+  routes
 })
