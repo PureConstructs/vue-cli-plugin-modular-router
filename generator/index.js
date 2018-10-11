@@ -44,6 +44,23 @@ module.exports = (api, options, rootOptions, invoking) => {
     const ast = recast.parse(code)
 
     // New option expression to inject
+    const expression = `${options.moduleName}Routes`
+
+    recast.types.visit(ast, {
+      visitCallExpression({
+        node
+      }) {
+        if (node.callee.object.name === 'baseRoutes') {
+          node.arguments.push(expression)
+          /* const options = node.arguments[0]
+          if (options && options.type ==='Identifier') {
+
+          } */
+        }
+
+        return false
+      }
+    })
 
     // New Import Declaration to inject
     const imports = [`import ${options.moduleName}Routes from '@/router/${options.moduleName}'`]
