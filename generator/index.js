@@ -96,7 +96,7 @@ module.exports = (api, options, rootOptions, invoking) => {
       var result = data.replace(/moduleName/g, `${options.moduleName}`)
 
       fs.writeFile(`${moduleDir}/index.js`, result, 'utf8', (err) => {
-        api.exitLog('Error writing changes to new module index.js file' + err, 'error')
+        if (err) api.exitLog('Error writing changes to new module index.js file' + err, 'error')
       })
     })
 

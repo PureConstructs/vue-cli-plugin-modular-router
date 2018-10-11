@@ -4,5 +4,5 @@ export default [{
   path: '/moduleName',
   name: 'moduleNameHome',
   title: 'moduleName | Home',
-  component: moduleName,
-}, ]
+  component: moduleName
+}]
