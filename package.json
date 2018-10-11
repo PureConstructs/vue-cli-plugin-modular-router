@@ -23,5 +23,8 @@
   "homepage": "https://github.com/PureConstructs/vue-cli-plugin-modular-router#readme",
   "devDependencies": {
     "@vue/cli-service": "^3.0.1"
+  },
+  "dependencies": {
+    "recast": "^0.15.5"
   }
 }
