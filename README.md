@@ -41,3 +41,12 @@ vue add vuetify
 vue add modular-router
 yarn serve:electron
 ```
+
+### Modular Vuex
+
+Just add [vue-cli-plugin-modular-router](https://www.npmjs.com/package/vue-cli-plugin-modular-router)
+
+```
+vue add modular-vuex
+vue add modular-router
+```
