@@ -100,6 +100,19 @@ module.exports = (api, options, rootOptions, invoking) => {
       })
     })
 
+    // replace moduleName string in module moduleNameHome.vue file
+    fs.readFile(`${viewsDir}/${options.moduleName}Home.vue`, 'utf8', (err, data) => {
+      if (err) {
+        api.exitLog('Error reading new module vue file' + err, 'error')
+        return
+      }
+      var result = data.replace(/moduleName/g, `${options.moduleName}`)
+
+      fs.writeFile(`${viewsDir}/${options.moduleName}Home.vue`, result, 'utf8', (err) => {
+        if (err) api.exitLog('Error writing changes to new module vue file' + err, 'error')
+      })
+    })
+
     // Remove router.js generated from initial router plugin installation
     if (fs.existsSync('./src/router.js')) {
       fs.unlink('./src/router.js', (err) => {
